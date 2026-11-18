@@ -5,7 +5,7 @@
   const root = $('[data-checkout]');
   const ESTADOS = ['Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 'Ciudad de México', 'Coahuila', 'Colima', 'Durango', 'Estado de México', 'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Michoacán', 'Morelos', 'Nayarit', 'Nuevo León', 'Oaxaca', 'Puebla', 'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz', 'Yucatán', 'Zacatecas'];
   const SHIP = { estandar: ['Estándar', '3 a 5 días hábiles'], express: ['Express', '24 horas en CDMX, GDL y MTY'], tienda: ['Recoger en tienda', 'Showroom PULSO, Roma Norte'] };
-  let step = 0; let ship = 'estandar'; let pay = 'tarjeta';
+  let step = 0; let ship = 'estandar'; let pay = 'tarjeta'; let summaryOpen = false;
   const data = {};
 
   const field = (id, label, { type = 'text', full = false, auto = '', mode = '', max = '' } = {}) => `
@@ -76,7 +76,12 @@
 
   function summary() {
     const s = $('[data-summary]'); if (!s) return;
-    s.innerHTML = `<h2>Resumen</h2>
+    s.classList.toggle('is-collapsed', !summaryOpen);
+    s.innerHTML = `<button type="button" class="summary__toggle" aria-expanded="${summaryOpen}" data-summary-toggle>
+        <span>${summaryOpen ? 'Ocultar' : 'Ver'} resumen (${Cart.count()})</span><span class="price">${fmt(Cart.total(ship))}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <h2>Resumen</h2>
+      <div class="summary__body">
       <div>${Cart.items.map((i) => lineItemHTML(i, { compact: true })).join('')}</div>
       <div class="totals">
         <div><span>Subtotal</span><span class="price">${fmt(Cart.subtotal())}</span></div>
@@ -84,7 +89,8 @@
         <div><span>Envío · ${SHIP[ship][0]}</span><span class="price">${Cart.shipping(ship) ? fmt(Cart.shipping(ship)) : 'Gratis'}</span></div>
         <div class="total"><span>Total</span><span class="price" data-total>${fmt(Cart.total(ship))}</span></div>
       </div>
-      <p class="muted" style="font-size:.85rem;margin:0">IVA incluido. Pago 100% seguro.</p>`;
+      <p class="muted" style="font-size:.85rem;margin:0">IVA incluido. Pago 100% seguro.</p></div>`;
+    s.querySelector('[data-summary-toggle]').addEventListener('click', () => { summaryOpen = !summaryOpen; summary(); });
     $$('[data-ship-price]').forEach((el) => { const v = Cart.shipping(el.dataset.shipPrice); el.textContent = v ? fmt(v) : 'Gratis'; });
   }
 

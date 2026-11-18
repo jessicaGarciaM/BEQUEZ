@@ -13,10 +13,12 @@ Sitio estático (HTML, CSS y JavaScript sin dependencias) listo para publicarse 
 | Tienda | `tienda.html` | Filtros por línea, categoría, género, talla, color, precio, ofertas y favoritos; orden; URL compartible |
 | Producto | `producto.html?id=…` | Galería con zoom y 3 vistas, cambio de color, tallas, cantidad, favoritos, barra de compra fija, recomendados y vistos recientemente |
 | Pago | `checkout.html` | 3 pasos con validación (datos, envío, pago con tarjeta / OXXO / SPEI), resumen y confirmación |
-| La marca | `marca.html` | Historia, valores, logotipo, paleta, tipografía y voz |
+| La marca | `marca.html` | Presentación de 18 diapositivas: qué es PULSO, su identidad (concepto, logo, color, tipografía, líneas, voz) y por qué el sitio está construido así. Se avanza con scroll, flechas del teclado, botones o deslizando en el celular |
 | 404 | `404.html` | Página de error |
 
 **Funciones globales:** carrito lateral con barra de envío gratis y códigos de descuento (`PULSO10`, `PRIMERKM`), favoritos, búsqueda (atajo `/`), vista de tallas, notificaciones, cursor personalizado, botones magnéticos, tarjetas con inclinación 3D, transiciones entre páginas y pantalla de carga. El carrito y los favoritos se guardan en el navegador (`localStorage`).
+
+**Celular:** diseño pensado primero para pantalla chica: tarjetas en dos columnas, barra de herramientas fija en la tienda, filtros en panel, barra fija de compra, resumen de pago plegable y botones al alcance del pulgar.
 
 **Accesibilidad:** navegación con teclado, foco visible, foco atrapado en paneles, textos alternativos y `prefers-reduced-motion` desactiva las animaciones.
 

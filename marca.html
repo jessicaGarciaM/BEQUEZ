@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>La marca — PULSO Performance Wear</title>
-  <meta name="description" content="La historia, los valores y la identidad visual de PULSO Performance Wear.">
+  <meta name="description" content="Presentación de PULSO: qué es la marca, su identidad visual y por qué el sitio web está construido así.">
   <meta name="theme-color" content="#2C46B5">
   <meta property="og:title" content="La marca — PULSO Performance Wear">
   <meta property="og:image" content="assets/img/brand/og-image.png">
@@ -15,85 +15,209 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/data.js"></script>
   <script defer src="assets/js/app.js"></script>
-  <script defer src="assets/js/brand.js"></script>
+  <script defer src="assets/js/deck.js"></script>
 </head>
-<body data-page="marca" data-header="over">
-  <main id="main">
-    <section class="brand-hero" aria-labelledby="bh">
-      <div class="wrap">
-        <h1 id="bh" class="display" data-split>Corremos con el corazón en la mano.</h1>
-        <p data-reveal>PULSO nació en 2019 en una pista de tartán de Ciudad Universitaria, entre corredores que entrenaban antes del trabajo con ropa que no aguantaba el ritmo. Hoy diseñamos cada prenda en CDMX y la probamos donde el aire es más delgado: a 2,240 metros.</p>
-      </div>
-      <svg class="brand-hero__pulse" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" aria-hidden="true"><path pathLength="1" d="M0,60 H520 L560,15 L610,110 L650,60 H760 L780,40 L800,60 H1440" stroke="#FFE14D" stroke-width="3" vector-effect="non-scaling-stroke"/></svg>
-    </section>
-
-    <div class="wrap">
-      <section class="brand-block" id="valores" aria-labelledby="v">
-        <div><h2 id="v">Lo que defendemos</h2><p>Tres reglas que revisamos antes de lanzar cualquier prenda.</p></div>
-        <div class="values">
-          <article class="value" data-reveal><h3>Probado, no prometido</h3><p>Cada prenda corre al menos 300 km con nuestro equipo de prueba antes de llegar a la tienda.</p></article>
-          <article class="value" data-reveal style="--d:.1s"><h3>Hecho para durar</h3><p>Usamos poliéster reciclado y costuras reforzadas. Una prenda que dura tres temporadas contamina menos que tres prendas.</p></article>
-          <article class="value" data-reveal style="--d:.2s"><h3>Todos los ritmos</h3><p>Tallas de XS a XXL en casi toda la colección, y un club gratuito donde nadie se queda atrás.</p></article>
-        </div>
-      </section>
-
-      <section class="brand-block" aria-labelledby="lg">
-        <div><h2 id="lg">Logotipo</h2><p>El isotipo es un latido: la línea del electrocardiograma que sube cuando te mueves. El nombre se dibuja con trazo continuo e inclinado 8°, como un corredor en plena zancada.</p>
-          <p class="muted" style="font-size:.9rem">Archivos: <a class="link-underline" href="assets/img/brand/logo.svg" download>logo.svg</a>, <a class="link-underline" href="assets/img/brand/logo-blanco.svg" download>logo-blanco.svg</a>, <a class="link-underline" href="assets/img/brand/isotipo.svg" download>isotipo.svg</a></p></div>
-        <div class="logo-show">
-          <div class="logo-tile logo-tile--light" data-reveal><img src="assets/img/brand/logo.svg" alt="Logotipo PULSO a color"></div>
-          <div class="logo-tile logo-tile--signal logo-tile--mark" data-reveal style="--d:.1s"><img src="assets/img/brand/isotipo.svg" alt="Isotipo PULSO"></div>
-          <div class="logo-tile logo-tile--blue logo-tile--mark" data-reveal><img src="assets/img/brand/isotipo.svg" alt="" style="filter:none"></div>
-          <div class="logo-tile logo-tile--dark" data-reveal style="--d:.1s"><img src="assets/img/brand/logo-blanco.svg" alt="Logotipo PULSO en blanco"></div>
-        </div>
-      </section>
-
-      <section class="brand-block" aria-labelledby="pl">
-        <div><h2 id="pl">Color</h2><p>La paleta sale de la pista: el azul de las líneas de meta, el rojo del tartán y el amarillo de las marcas de salida. Haz clic en un color para copiar su código.</p></div>
-        <div class="palette">
-          <button class="swatch-card" style="--c:#2C46B5;--fg:#fff" data-copy="#2C46B5" data-reveal><em>Copiar</em><b>Cobalto</b><span>#2C46B5</span><span style="margin-top:.4rem;font-size:.78rem">Color principal. Fondos de impacto, botones y enlaces.</span></button>
-          <button class="swatch-card" style="--c:#141A3D;--fg:#fff" data-copy="#141A3D" data-reveal><em>Copiar</em><b>Tinta</b><span>#141A3D</span><span style="margin-top:.4rem;font-size:.78rem">Texto, fondos oscuros y contraste.</span></button>
-          <button class="swatch-card" style="--c:#E5532E;--fg:#fff" data-copy="#E5532E" data-reveal><em>Copiar</em><b>Pista</b><span>#E5532E</span><span style="margin-top:.4rem;font-size:.78rem">Acento del tartán. Ofertas y momentos de energía.</span></button>
-          <button class="swatch-card" style="--c:#FFE14D;--fg:#141A3D" data-copy="#FFE14D" data-reveal><em>Copiar</em><b>Señal</b><span>#FFE14D</span><span style="margin-top:.4rem;font-size:.78rem">Llamadas a la acción sobre cobalto. Usar con medida.</span></button>
-          <button class="swatch-card" style="--c:#C9D4FF;--fg:#141A3D" data-copy="#C9D4FF" data-reveal><em>Copiar</em><b>Hielo</b><span>#C9D4FF</span><span style="margin-top:.4rem;font-size:.78rem">Superficies suaves y estados seleccionados.</span></button>
-          <button class="swatch-card" style="--c:#F1F2F4;--fg:#141A3D" data-copy="#F1F2F4" data-reveal><em>Copiar</em><b>Cal</b><span>#F1F2F4</span><span style="margin-top:.4rem;font-size:.78rem">Fondo de producto y tarjetas.</span></button>
-          <button class="swatch-card" style="--c:#3B4150;--fg:#fff" data-copy="#3B4150" data-reveal><em>Copiar</em><b>Grafito</b><span>#3B4150</span><span style="margin-top:.4rem;font-size:.78rem">Colorway neutro de prendas.</span></button>
-          <button class="swatch-card" style="--c:#56704F;--fg:#fff" data-copy="#56704F" data-reveal><em>Copiar</em><b>Musgo</b><span>#56704F</span><span style="margin-top:.4rem;font-size:.78rem">Colorway de temporada.</span></button>
-        </div>
-      </section>
-
-      <section class="brand-block" aria-labelledby="tp">
-        <div><h2 id="tp">Tipografía</h2><p>Big Shoulders Display para titulares: condensada, pesada y con origen en la señalética urbana. Instrument Sans para todo lo demás: clara a cualquier tamaño.</p></div>
-        <div class="type-specimen">
-          <div class="big" data-split>Aa 42K 2:59</div>
-          <div class="type-row"><span>Big Shoulders Display · Black 900</span><span>Titulares, números, precios grandes</span></div>
-          <p class="body-sample">Ropa para correr, entrenar y seguir con tu día. Diseñada en Ciudad de México.</p>
-          <div class="type-row"><span>Instrument Sans · 400 / 600</span><span>Texto, botones, formularios</span></div>
-        </div>
-      </section>
-
-      <section class="brand-block" aria-labelledby="vz">
-        <div><h2 id="vz">Voz</h2><p>Hablamos como un buen entrenador: directo, cercano y sin exagerar.</p></div>
-        <div class="values">
-          <article class="value" data-reveal><h3>Así sí</h3><p>“Secado 2× más rápido que el algodón.” Datos concretos, verbos claros y tuteo.</p></article>
-          <article class="value" data-reveal style="--d:.1s"><h3>Así no</h3><p>“La prenda más revolucionaria del planeta.” Superlativos vacíos que nadie puede comprobar.</p></article>
-          <article class="value" data-reveal style="--d:.2s"><h3>Siempre</h3><p>Decir qué pasa al tocar un botón: “Agregar al carrito”, “Pagar ahora”, “Avisarme”.</p></article>
-        </div>
-      </section>
+<body data-page="marca" data-header="over" class="page-deck">
+  <main id="main" class="deck">
+<section class="slide slide--cobalto slide--cover" data-slide data-part="La marca" aria-label="Portada">
+<div class="slide__inner">
+  <p class="slide__kicker" data-in>Presentación de marca y sitio web · 2026</p>
+  <div class="cover__mark" data-in data-wordmark></div>
+  <p class="cover__lead" data-in>Qué es PULSO, cómo se ve y por qué su tienda en línea está construida así.</p>
+  <p class="cover__hint" data-in>Desliza, usa las flechas del teclado o los botones para avanzar.</p>
+  <svg class="cover__pulse" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" aria-hidden="true"><path pathLength="1" d="M0,60 H560 L600,15 L650,110 L690,60 H800 L820,40 L840,60 H1440" stroke="#FFE14D" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div>
+</section>
+<section class="slide slide--papel" data-slide data-part="La marca" aria-label="Qué es PULSO">
+<div class="slide__inner">
+  <div class="split">
+    <div>
+      <h2 class="slide__title" data-in>Ropa deportiva hecha en México para moverse en serio.</h2>
+      <p class="slide__text" data-in>PULSO diseña ropa para correr, entrenar y seguir con el día. Cada prenda se diseña en Ciudad de México y se prueba a 2,240 metros de altura, donde el aire es más delgado y el clima cambia en una misma mañana.</p>
     </div>
-
-    <div class="ticker ticker--flat" data-ticker="-1" aria-hidden="true"><div class="ticker__track"><div class="ticker__group">
-      <span>Probado a 2,240 metros</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Diseñado en CDMX</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Muévete con pulso</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div></div></div>
-
-    <section class="section" style="text-align:center">
-      <div class="wrap" style="display:grid;justify-items:center;gap:1.5rem">
-        <h2 class="display" style="font-size:var(--step-4)" data-split>Ahora te toca a ti.</h2>
-        <a href="tienda.html" class="btn btn--primary" data-magnetic><span class="btn__label">Comprar la colección</span></a>
-      </div>
-    </section>
+    <dl class="facts" data-in>
+      <div><dt>12</dt><dd>productos en el lanzamiento</dd></div>
+      <div><dt>3</dt><dd>líneas: running, training y lifestyle</dd></div>
+      <div><dt>4</dt><dd>tecnologías textiles propias</dd></div>
+      <div><dt>XS–XXL</dt><dd>tallas en casi toda la colección</dd></div>
+    </dl>
+  </div></div>
+</section>
+<section class="slide slide--tinta slide--lanes" data-slide data-part="La marca" aria-label="El concepto">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>La idea: la pista de atletismo.</h2>
+  <p class="slide__text" data-in>Todo sale de un lugar que cualquier deportista reconoce. Así la marca se ve deportiva sin caer en el negro con verde neón que usan casi todas.</p>
+  <ul class="concept">
+    <li data-in><i style="background:#2C46B5"></i><b>Azul cobalto</b><span>Las líneas de los carriles</span></li>
+    <li data-in><i style="background:#E5532E"></i><b>Rojo tartán</b><span>La superficie de la pista</span></li>
+    <li data-in><i style="background:#FFE14D"></i><b>Amarillo señal</b><span>Las marcas de salida</span></li>
+    <li data-in><i class="concept__beat"><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>El latido</b><span>Lo que sientes al correr</span></li>
+  </ul></div>
+</section>
+<section class="slide slide--cal" data-slide data-part="La marca" aria-label="Logotipo">
+<div class="slide__inner">
+  <div class="split">
+    <div>
+      <h2 class="slide__title" data-in>Un latido y una zancada.</h2>
+      <p class="slide__text" data-in>El isotipo es la línea de un electrocardiograma: sube cuando te mueves. El nombre se dibuja con un trazo continuo inclinado 8°, como un corredor en plena zancada. Funciona pequeño en una etiqueta y enorme en una lona.</p>
+      <p class="slide__note" data-in>Archivos en <code>assets/img/brand/</code>: logo a color, en blanco e isotipo.</p>
+    </div>
+    <div class="logo-grid" data-in>
+      <div class="logo-tile logo-tile--light"><img src="assets/img/brand/logo.svg" alt="Logotipo PULSO a color"></div>
+      <div class="logo-tile logo-tile--dark"><img src="assets/img/brand/logo-blanco.svg" alt="Logotipo PULSO en blanco"></div>
+      <div class="logo-tile logo-tile--signal logo-tile--mark"><img src="assets/img/brand/isotipo.svg" alt="Isotipo PULSO"></div>
+      <div class="logo-tile logo-tile--blue logo-tile--mark"><img src="favicon.svg" alt=""></div>
+    </div>
+  </div></div>
+</section>
+<section class="slide slide--papel" data-slide data-part="La marca" aria-label="Color">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Color.</h2>
+  <p class="slide__text" data-in>Un azul profundo como base, rojo y amarillo solo para lo que debe llamar la atención. Toca un color para copiar su código.</p>
+  <div class="palette palette--deck">
+    <button class="swatch-card" style="--c:#2C46B5;--fg:#fff" data-copy="#2C46B5" data-in><em>Copiar</em><b>Cobalto</b><span>#2C46B5</span><span class="swatch-card__use">Principal</span></button>
+    <button class="swatch-card" style="--c:#141A3D;--fg:#fff" data-copy="#141A3D" data-in><em>Copiar</em><b>Tinta</b><span>#141A3D</span><span class="swatch-card__use">Texto y fondos</span></button>
+    <button class="swatch-card" style="--c:#E5532E;--fg:#fff" data-copy="#E5532E" data-in><em>Copiar</em><b>Pista</b><span>#E5532E</span><span class="swatch-card__use">Energía y ofertas</span></button>
+    <button class="swatch-card" style="--c:#FFE14D;--fg:#141A3D" data-copy="#FFE14D" data-in><em>Copiar</em><b>Señal</b><span>#FFE14D</span><span class="swatch-card__use">Llamadas a la acción</span></button>
+    <button class="swatch-card" style="--c:#C9D4FF;--fg:#141A3D" data-copy="#C9D4FF" data-in><em>Copiar</em><b>Hielo</b><span>#C9D4FF</span><span class="swatch-card__use">Superficies suaves</span></button>
+    <button class="swatch-card" style="--c:#F1F2F4;--fg:#141A3D" data-copy="#F1F2F4" data-in><em>Copiar</em><b>Cal</b><span>#F1F2F4</span><span class="swatch-card__use">Fondo de producto</span></button>
+  </div></div>
+</section>
+<section class="slide slide--tinta" data-slide data-part="La marca" aria-label="Tipografía">
+<div class="slide__inner">
+  <div class="split split--wide">
+    <div>
+      <h2 class="slide__title" data-in>Tipografía.</h2>
+      <p class="slide__text" data-in><b>Big Shoulders Display</b> para titulares: condensada, pesada, nacida de la señalética urbana. <b>Instrument Sans</b> para todo lo demás: clara en cualquier tamaño de pantalla.</p>
+    </div>
+    <div class="type-demo" data-in>
+      <span class="type-demo__big">42K 2:59</span>
+      <span class="type-demo__body">Ropa para correr, entrenar y seguir con tu día.</span>
+    </div>
+  </div></div>
+</section>
+<section class="slide slide--cal" data-slide data-part="La marca" aria-label="Líneas de producto">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Tres líneas, una por forma de moverse.</h2>
+  <div class="lines">
+    <article data-in><img src="assets/img/products/rompevientos-viento-norte--tinta--front.webp" alt="Rompevientos Viento Norte" loading="lazy"><h3>Volt</h3><p>Running. Ligera, ventilada y reflectiva.</p></article>
+    <article data-in><img src="assets/img/products/leggings-kinesis--musgo--front.webp" alt="Leggings Kinesis" loading="lazy"><h3>Base</h3><p>Training. Compresión y estabilidad.</p></article>
+    <article data-in><img src="assets/img/products/hoodie-altitud--cobalto--front.webp" alt="Hoodie Altitud" loading="lazy"><h3>Calle</h3><p>Lifestyle. Del entrenamiento al resto del día.</p></article>
+  </div></div>
+</section>
+<section class="slide slide--papel" data-slide data-part="La marca" aria-label="Voz">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Hablamos como un buen entrenador.</h2>
+  <div class="voice">
+    <div class="voice__card voice__card--yes" data-in><b>Así sí</b><p>“Secado 2× más rápido que el algodón.”</p><span>Datos concretos, verbos claros, tuteo.</span></div>
+    <div class="voice__card voice__card--no" data-in><b>Así no</b><p>“La prenda más revolucionaria del planeta.”</p><span>Superlativos que nadie puede comprobar.</span></div>
+  </div></div>
+</section>
+<section class="slide slide--pista slide--divider" data-slide data-part="El sitio" aria-label="El sitio web">
+<div class="slide__inner">
+  <p class="slide__kicker" data-in>Segunda parte</p>
+  <h2 class="slide__title slide__title--xl" data-in>Por qué el sitio está construido así.</h2>
+  <p class="slide__text" data-in>Cada decisión responde a dos objetivos: vender y que la marca se recuerde.</p></div>
+</section>
+<section class="slide slide--papel" data-slide data-part="El sitio" aria-label="Para quién">
+<div class="slide__inner">
+  <div class="split">
+    <div>
+      <h2 class="slide__title" data-in>Pensado para quien compra desde el celular.</h2>
+      <p class="slide__text" data-in>La clienta o cliente típico corre o entrena antes del trabajo y compra en el trayecto, con una mano. Por eso todo se diseñó primero para pantalla chica: botones grandes, la compra siempre a un toque y nada que dependa de pasar el cursor.</p>
+    </div>
+    <ul class="checks" data-in>
+      <li>Tarjetas de producto en dos columnas</li><li>Barra fija para agregar al carrito</li><li>Filtros en un panel lateral</li><li>Deslizar para ver frente, espalda y detalle</li><li>Resumen de compra plegable en el pago</li>
+    </ul>
+  </div></div>
+</section>
+<section class="slide slide--cobalto" data-slide data-part="El sitio" aria-label="La portada">
+<div class="slide__inner">
+  <div class="split">
+    <div>
+      <h2 class="slide__title" data-in>Una portada que late.</h2>
+      <p class="slide__text" data-in>La línea del latido cruza la portada y sus pulsaciones suben cuando mueves el cursor o haces scroll. Es el momento que la gente recuerda: comunica la marca sin leer una sola palabra.</p>
+    </div>
+    <div class="bpm-demo" data-in aria-hidden="true">
+      <span class="bpm-demo__num"><i></i><b data-demo-bpm>72</b> BPM</span>
+      <svg viewBox="0 0 400 120" fill="none"><path class="bpm-demo__line" d="M0,60 H120 L140,20 L165,105 L185,60 H260 L275,45 L290,60 H400" stroke="#FFE14D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div></div>
+</section>
+<section class="slide slide--pista" data-slide data-part="El sitio" aria-label="Carriles">
+<div class="slide__inner">
+  <div class="split">
+    <div>
+      <h2 class="slide__title" data-in>Primero eliges tu deporte.</h2>
+      <p class="slide__text" data-in>En lugar de un menú de categorías, la portada muestra tres carriles: Volt, Base y Calle. Elegir deporte primero reduce las opciones de golpe y lleva a una tienda ya filtrada.</p>
+    </div>
+    <div class="mini-lanes" data-in><span>1 · Volt</span><span>2 · Base</span><span>3 · Calle</span></div>
+  </div></div>
+</section>
+<section class="slide slide--papel" data-slide data-part="El sitio" aria-label="Tienda y producto">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Encontrar la prenda en segundos.</h2>
+  <div class="reasons">
+    <div data-in><h3>Filtros combinables</h3><p>Deporte, talla, color y precio a la vez. La dirección de la página guarda los filtros, así se puede compartir una búsqueda.</p></div>
+    <div data-in><h3>Agregar rápido</h3><p>En computadora se elige la talla sin salir de la tienda. En celular, la barra fija de compra está siempre a la mano.</p></div>
+    <div data-in><h3>Tres vistas y guía de tallas</h3><p>Frente, espalda y detalle del tejido resuelven las dudas que causan devoluciones.</p></div>
+  </div></div>
+</section>
+<section class="slide slide--tinta" data-slide data-part="El sitio" aria-label="Carrito y pago">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Un pago sin fricción, a la mexicana.</h2>
+  <div class="reasons reasons--dark">
+    <div data-in><h3>Barra de envío gratis</h3><p>Muestra cuánto falta para llegar a $999. Invita a agregar una prenda más y sube el ticket promedio.</p></div>
+    <div data-in><h3>Tres pasos claros</h3><p>Datos, envío y pago, con validación en vivo y el total siempre visible.</p></div>
+    <div data-in><h3>OXXO y SPEI</h3><p>Además de tarjeta, los métodos que más usa quien compra en línea en México.</p></div>
+  </div></div>
+</section>
+<section class="slide slide--cal" data-slide data-part="El sitio" aria-label="Movimiento">
+<div class="slide__inner">
+  <div class="split">
+    <div>
+      <h2 class="slide__title" data-in>Animaciones que responden a lo que haces.</h2>
+      <p class="slide__text" data-in>La prenda vuela al carrito al agregarla, las tarjetas se reacomodan al filtrar y las páginas cambian con una transición de carriles. Si alguien tiene activada la opción de reducir movimiento en su teléfono, el sitio la respeta.</p>
+    </div>
+    <div class="fly-demo" data-in aria-hidden="true"><img src="assets/img/products/playera-ritmo--tinta--front.webp" alt=""><span class="fly-demo__bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 8h14l-1 12.5H6L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><b>1</b></span></div>
+  </div></div>
+</section>
+<section class="slide slide--papel" data-slide data-part="El sitio" aria-label="Rendimiento">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Ligero, rápido y gratis de publicar.</h2>
+  <dl class="facts facts--row" data-in>
+    <div><dt>0</dt><dd>dependencias o frameworks: solo HTML, CSS y JavaScript</dd></div>
+    <div><dt>~50 KB</dt><dd>por imagen de producto en formato WebP</dd></div>
+    <div><dt>$0</dt><dd>de hosting con GitHub Pages</dd></div>
+  </dl>
+  <p class="slide__text" data-in>Además se navega con teclado, tiene textos alternativos en las imágenes y contraste suficiente para leer bajo el sol.</p></div>
+</section>
+<section class="slide slide--cobalto" data-slide data-part="El sitio" aria-label="Próximos pasos">
+<div class="slide__inner">
+  <h2 class="slide__title" data-in>Lo que sigue para vender.</h2>
+  <ol class="steps-list">
+    <li data-in><b>Fotos reales</b><span>Reemplazar los renders por fotos de las muestras con el mismo nombre de archivo.</span></li>
+    <li data-in><b>Pasarela de pago</b><span>Conectar Stripe o Mercado Pago; hoy el pago es de demostración.</span></li>
+    <li data-in><b>Dominio propio</b><span>Apuntar pulso.mx (o el que elijas) a GitHub Pages.</span></li>
+    <li data-in><b>Medir</b><span>Agregar analítica para saber qué productos y carriles convierten.</span></li>
+  </ol></div>
+</section>
+<section class="slide slide--tinta slide--cover" data-slide data-part="El sitio" aria-label="Cierre">
+<div class="slide__inner">
+  <h2 class="slide__title slide__title--xl" data-in>Muévete con pulso.</h2>
+  <div class="cover__ctas" data-in>
+    <a href="tienda.html" class="btn btn--signal" data-magnetic><span class="btn__label">Ir a la tienda</span></a>
+    <a href="index.html" class="btn btn--ghost" data-magnetic><span class="btn__label">Volver al inicio</span></a>
+  </div></div>
+</section>
   </main>
+  <nav class="deck-nav" aria-label="Diapositivas">
+    <div class="deck-nav__bar"><i data-deck-progress></i></div>
+    <span class="deck-nav__count" aria-live="polite"><b data-deck-cur>1</b> / <span data-deck-total>18</span> · <span data-deck-part>La marca</span></span>
+    <div class="deck-nav__btns">
+      <button class="deck-nav__btn" data-deck-prev aria-label="Diapositiva anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg></button>
+      <button class="deck-nav__btn" data-deck-next aria-label="Siguiente diapositiva"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    </div>
+  </nav>
+  <ol class="deck-dots" aria-hidden="true"><li><button data-deck-go="0" tabindex="-1"></button></li><li><button data-deck-go="1" tabindex="-1"></button></li><li><button data-deck-go="2" tabindex="-1"></button></li><li><button data-deck-go="3" tabindex="-1"></button></li><li><button data-deck-go="4" tabindex="-1"></button></li><li><button data-deck-go="5" tabindex="-1"></button></li><li><button data-deck-go="6" tabindex="-1"></button></li><li><button data-deck-go="7" tabindex="-1"></button></li><li><button data-deck-go="8" tabindex="-1"></button></li><li><button data-deck-go="9" tabindex="-1"></button></li><li><button data-deck-go="10" tabindex="-1"></button></li><li><button data-deck-go="11" tabindex="-1"></button></li><li><button data-deck-go="12" tabindex="-1"></button></li><li><button data-deck-go="13" tabindex="-1"></button></li><li><button data-deck-go="14" tabindex="-1"></button></li><li><button data-deck-go="15" tabindex="-1"></button></li><li><button data-deck-go="16" tabindex="-1"></button></li><li><button data-deck-go="17" tabindex="-1"></button></li></ol>
 </body>
 </html>
