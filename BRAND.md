@@ -12,7 +12,7 @@ La pista de atletismo. El azul de las líneas, el rojo del tartán, el amarillo 
 ## Color
 | Nombre | Hex | Uso |
 | --- | --- | --- |
-| Cobalto | `#2340FF` | Color principal, botones, fondos de impacto |
+| Cobalto | `#2C46B5` | Color principal, botones, fondos de impacto |
 | Tinta | `#141A3D` | Texto y fondos oscuros |
 | Pista | `#E5532E` | Acento de energía, ofertas |
 | Señal | `#FFE14D` | Llamadas a la acción sobre cobalto (con medida) |

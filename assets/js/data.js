@@ -1,6 +1,6 @@
 /* Catálogo PULSO. Las imágenes viven en assets/img/products/{id}--{color}--{vista}.svg */
 window.PULSO_COLORS = {
-  cobalto: { name: 'Cobalto', hex: '#2340FF' },
+  cobalto: { name: 'Cobalto', hex: '#2C46B5' },
   tinta: { name: 'Tinta', hex: '#141A3D' },
   cal: { name: 'Cal', hex: '#F1F2F4' },
   pista: { name: 'Pista', hex: '#E5532E' },

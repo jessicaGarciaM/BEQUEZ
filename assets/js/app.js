@@ -24,7 +24,7 @@
   const P = window.PULSO_PRODUCTS;
   const C = window.PULSO_COLORS;
   const byId = (id) => P.find((p) => p.id === id);
-  const img = (id, color, view = 'front') => `assets/img/products/${id}--${color}--${view}.svg`;
+  const img = (id, color, view = 'front') => `assets/img/products/${id}--${color}--${view}.webp`;
   const url = (p, color) => `producto.html?id=${p.id}${color ? `&color=${color}` : ''}`;
 
   /* ---------- Iconos ---------- */

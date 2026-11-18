@@ -1,14 +1,14 @@
 """Genera la identidad visual de PULSO y las ilustraciones de producto (SVG + PNG)."""
 import json, os, subprocess, sys
 
-ROOT = sys.argv[1] if len(sys.argv) > 1 else "."
+ROOT = next((a for a in sys.argv[1:] if not a.startswith("--")), ".")
 PROD = os.path.join(ROOT, "assets/img/products")
 BRAND = os.path.join(ROOT, "assets/img/brand")
 os.makedirs(PROD, exist_ok=True)
 os.makedirs(BRAND, exist_ok=True)
 
 COLORS = {
-    "cobalto": ("Cobalto", "#2340FF"),
+    "cobalto": ("Cobalto", "#2C46B5"),
     "tinta": ("Tinta", "#141A3D"),
     "cal": ("Cal", "#F1F2F4"),
     "pista": ("Pista", "#E5532E"),
@@ -302,6 +302,13 @@ def garment_svg(key, base, accent, view="front", detail=False):
         vb = f"{max(0, lx - 130)} {max(0, ly - 150)} 260 300"
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}">{body}</svg>'
 
+import re
+_FLAT_RE = re.compile(r'<(?:path|rect)[^>]*(?:url\(#light\)|url\(#weave\)|url\(#blur10\))[^>]*/>')
+
+def flatten(svg):
+    """Quita sombreados ilustrados: deja solo color base, paneles, costuras y estampados."""
+    return _FLAT_RE.sub("", svg).replace(' filter="url(#drop)"', "")
+
 def socks_svg(base, accent, view="front", detail=False):
     one = garment_svg("socks", base, accent).split(">", 1)[1].rsplit("</svg>", 1)[0]
     two = garment_svg("socks", shade(base, -0.15 if lum(base) > 0.4 else 0.15), accent).split(">", 1)[1].rsplit("</svg>", 1)[0]
@@ -329,6 +336,7 @@ CATALOG = [
 ]
 
 def main():
+    flat = "--flat" in sys.argv
     brand_assets()
     count = 0
     for p in CATALOG:
@@ -340,6 +348,10 @@ def main():
                     svg = socks_svg(base, acc, v, det)
                 else:
                     svg = garment_svg(p["g"], base, acc, v, det)
+                if flat:
+                    if view == "detail":
+                        continue
+                    svg = flatten(svg)
                 write(f"{PROD}/{p['id']}--{bc}--{view}.svg", svg)
                 count += 1
     print("product images:", count)

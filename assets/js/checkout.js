@@ -183,7 +183,7 @@
     if (reduced) return;
     const cv = $('#confetti'); const ctx = cv.getContext('2d');
     cv.width = innerWidth; cv.height = innerHeight;
-    const cols = ['#2340FF', '#E5532E', '#FFE14D', '#141A3D', '#C9D4FF'];
+    const cols = ['#2C46B5', '#E5532E', '#FFE14D', '#141A3D', '#C9D4FF'];
     const ps = Array.from({ length: 180 }, () => ({ x: innerWidth / 2 + (Math.random() - 0.5) * 200, y: innerHeight * 0.35, vx: (Math.random() - 0.5) * 16, vy: -Math.random() * 16 - 4, r: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.3, w: 6 + Math.random() * 8, h: 4 + Math.random() * 6, c: cols[Math.floor(Math.random() * cols.length)] }));
     let f = 0;
     (function loop() {

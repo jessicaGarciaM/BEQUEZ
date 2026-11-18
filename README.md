@@ -42,8 +42,9 @@ assets/
   js/app.js             carrito, favoritos, búsqueda, cursor, transiciones
   js/home.js · shop.js · product.js · checkout.js · brand.js
   img/brand/            logotipo, isotipo, imagen para redes
-  img/products/         108 ilustraciones (12 productos × 3 colores × 3 vistas)
-tools/generar-imagenes.py   regenera logo e ilustraciones de producto
+  img/products/         108 renders de producto en WebP (12 productos × 3 colores × frente, espalda y detalle)
+tools/generar-imagenes.py   logo y siluetas de las prendas (diseño, colores, estampados)
+tools/render-producto.py    convierte las siluetas en renders con volumen, tela, luz y sombra
 BRAND.md                manual de marca
 ```
 
@@ -52,8 +53,14 @@ BRAND.md                manual de marca
 Todo el catálogo vive en `assets/js/data.js`. Para agregar un producto:
 
 1. Añade su objeto a `PULSO_PRODUCTS` (id, nombre, precio, colores, tallas…).
-2. Agrega su silueta y colores en `tools/generar-imagenes.py` y ejecuta `python3 tools/generar-imagenes.py .`
-   — o coloca tus propias fotos con el patrón `assets/img/products/{id}--{color}--{front|back|detail}.svg` (puedes cambiar la extensión en la función `img()` de `app.js`).
+2. Agrega su silueta y colores en `tools/generar-imagenes.py` y genera los renders:
+   ```bash
+   python3 tools/generar-imagenes.py /tmp/planos --flat
+   python3 tools/render-producto.py /tmp/planos/assets/img/products assets/img/products
+   ```
+   Requiere `rsvg-convert`, `numpy`, `scipy` y `Pillow`.
+3. Cuando tengas fotos reales de tus prendas, reemplaza los archivos con el mismo nombre:
+   `assets/img/products/{id}--{color}--{front|back|detail}.webp` (900 × 1050 px, fondo transparente o gris claro).
 
 ## Cobrar pagos de verdad
 
