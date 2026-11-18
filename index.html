@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PULSO — Ropa deportiva para correr, entrenar y moverte</title>
+  <meta name="description" content="PULSO Performance Wear: ropa deportiva diseñada en Ciudad de México. Running, training y lifestyle con tecnología AeroMesh, DryPulse y Flex 4D. Envío gratis desde $999.">
+  <meta name="theme-color" content="#2340FF">
+  <meta property="og:title" content="PULSO — Performance Wear">
+  <meta property="og:description" content="Ropa deportiva diseñada en Ciudad de México. Muévete con pulso.">
+  <meta property="og:image" content="assets/img/brand/og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/home.js"></script>
+</head>
+<body data-page="inicio" data-header="over">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__pulse" viewBox="0 0 520 90" fill="none"><path pathLength="1" d="M0,45 H170 L195,10 L225,85 L250,45 H290 L305,30 L318,45 H520" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="loader__count"><span data-count>0</span><small>BPM</small></div>
+    </div>
+    <div class="loader__lanes"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Nueva colección">
+      <div class="hero__track" aria-hidden="true"><div class="hero__track-plane"></div></div>
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__bpm" aria-live="off"><i></i><span data-bpm>72</span>&nbsp;BPM · mueve el cursor</div>
+      <div class="hero__badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text font-size="17" font-weight="700" fill="#fff" letter-spacing="4.5" font-family="Instrument Sans, sans-serif"><textPath href="#circ">COLECCIÓN ALTITUD · OTOÑO 2026 · </textPath></text></svg>
+        <b>26</b>
+      </div>
+      <div class="hero__product" aria-hidden="true"><div class="hero__product-inner"><img src="assets/img/products/hoodie-altitud--cobalto--front.svg" alt="" width="600" height="700"></div></div>
+      <div class="wrap">
+        <div class="hero__inner">
+          <h1 class="hero__title display" aria-label="Muévete con pulso">
+            <span class="line"><span>Muévete</span></span>
+            <span class="line line--outline"><span>con</span></span>
+            <span class="line"><span>pulso.</span></span>
+          </h1>
+          <div class="hero__meta">
+            <p>Ropa para correr, entrenar y seguir con tu día. Diseñada en Ciudad de México y probada a 2,240 metros.</p>
+            <div class="hero__ctas">
+              <a href="tienda.html" class="btn btn--signal" data-magnetic><span class="btn__label">Comprar la colección</span></a>
+              <a href="#carriles" class="btn btn--ghost" data-magnetic><span class="btn__label">Elegir mi deporte</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__scroll"><span>Envío gratis desde $999 · Devoluciones en 30 días</span><span><i></i>Desliza</span></div>
+      </div>
+    </section>
+
+    <div class="ticker" data-ticker="-1" aria-hidden="true">
+      <div class="ticker__track"><div class="ticker__group">
+        <span>Hecho para el siguiente kilómetro</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Nueva colección Altitud</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Envío gratis desde $999</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Probado a 2,240 m</span><svg viewBox="0 0 70 60"><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div></div>
+    </div>
+
+    <!-- CARRILES -->
+    <section class="lanes" id="carriles" aria-labelledby="lanes-title">
+      <div class="wrap">
+        <div class="lanes__head">
+          <h2 id="lanes-title" class="display" data-split>Elige tu carril.</h2>
+          <p style="max-width:40ch;margin-top:1rem;font-size:var(--step-1)" data-reveal>Tres líneas, una para cada forma de moverte. Pasa el cursor por cada carril para ver qué incluye.</p>
+        </div>
+        <div data-lanes></div>
+        <div style="height:clamp(4rem,8vw,7rem)"></div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="section" aria-labelledby="feat-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="feat-title" class="display" data-split>Lo nuevo en la pista</h2>
+          <div class="tabs" role="tablist" aria-label="Filtrar por deporte" data-tabs>
+            <span class="tabs__ink" aria-hidden="true"></span>
+            <button role="tab" aria-selected="true" data-filter="all">Todo</button>
+            <button role="tab" aria-selected="false" data-filter="running">Running</button>
+            <button role="tab" aria-selected="false" data-filter="training">Training</button>
+            <button role="tab" aria-selected="false" data-filter="lifestyle">Lifestyle</button>
+            <button role="tab" aria-selected="false" data-filter="accesorios">Accesorios</button>
+          </div>
+        </div>
+        <div class="grid" data-featured></div>
+        <div style="display:flex;justify-content:center;margin-top:3rem"><a href="tienda.html" class="btn btn--primary" data-magnetic><span class="btn__label">Ver los 12 productos</span></a></div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍA -->
+    <section class="tech" aria-labelledby="tech-title">
+      <div class="tech__pin" data-hscroll>
+        <div class="tech__sticky">
+          <div class="tech__head">
+            <div>
+              <h2 id="tech-title" class="display">Lo que no se ve<br>también trabaja.</h2>
+              <p style="max-width:44ch;margin-top:1rem;opacity:.8">Cuatro tecnologías textiles desarrolladas para el clima y la altitud de México.</p>
+            </div>
+            <div class="tech__progress" aria-hidden="true"><i data-hprogress></i></div>
+          </div>
+          <div class="tech__rail" data-hrail></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFIESTO -->
+    <section class="section manifesto" aria-label="Manifiesto">
+      <div class="wrap">
+        <p class="manifesto__text" data-manifesto>No hacemos ropa para posar. La hacemos para el kilómetro que no querías correr, la serie que casi dejas y la mañana en que saliste de todos modos.</p>
+        <div class="manifesto__foot" data-reveal>
+          <a href="marca.html" class="btn btn--primary" data-magnetic><span class="btn__label">Conoce la marca</span></a>
+          <span class="muted">Diseñada en CDMX desde 2019.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DROP -->
+    <section class="section drop" aria-labelledby="drop-title">
+      <div class="wrap drop__grid">
+        <div>
+          <h2 id="drop-title" class="display" data-split>Próximo lanzamiento: Línea Nocturna</h2>
+          <p class="lead" data-reveal>Prendas 100% reflectivas para quien corre de noche. Cantidades limitadas. Suscríbete y compra 24 horas antes que nadie.</p>
+          <div class="countdown" data-countdown="2026-12-05T10:00:00-06:00" aria-live="off">
+            <div><b data-cd="d">00</b><span>días</span></div>
+            <div><b data-cd="h">00</b><span>horas</span></div>
+            <div><b data-cd="m">00</b><span>minutos</span></div>
+            <div><b data-cd="s">00</b><span>segundos</span></div>
+          </div>
+          <form class="newsletter" data-newsletter novalidate>
+            <label class="sr-only" for="nl-email">Correo electrónico</label>
+            <input id="nl-email" type="email" placeholder="tu@correo.com" required>
+            <button class="btn btn--primary" style="min-height:46px"><span class="btn__label">Avisarme</span></button>
+          </form>
+          <div class="form-msg" data-nl-msg role="status"></div>
+        </div>
+        <div class="drop__stack" aria-hidden="true">
+          <img src="assets/img/products/rompevientos-viento-norte--senal--front.svg" alt="">
+          <img src="assets/img/products/manga-larga-umbral--grafito--front.svg" alt="">
+          <img src="assets/img/products/leggings-kinesis--tinta--front.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- CLUB -->
+    <section class="section club" id="club" aria-labelledby="club-title">
+      <div class="wrap club__grid">
+        <div>
+          <h2 id="club-title" class="display" data-split>Club PULSO</h2>
+          <p class="lead" style="margin-top:1rem" data-reveal>Salidas gratuitas cada semana en Ciudad de México. Llega 10 minutos antes; todos los ritmos son bienvenidos.</p>
+          <a href="#" class="btn btn--primary" data-magnetic data-reveal style="margin-top:1rem"><span class="btn__label">Unirme al club</span></a>
+        </div>
+        <ul class="sessions" data-reveal>
+          <li class="session"><span class="session__day">Mar</span><span class="session__info"><strong>Fondo suave en Chapultepec</strong><span>6:30 · Puerta de los Leones</span></span><span class="session__dist">8 km</span></li>
+          <li class="session"><span class="session__day">Jue</span><span class="session__info"><strong>Series en pista</strong><span>19:00 · Ciudad Universitaria · 10 × 400 m</span></span><span class="session__dist">6 km</span></li>
+          <li class="session"><span class="session__day">Sáb</span><span class="session__info"><strong>Trail en Desierto de los Leones</strong><span>7:00 · Estacionamiento principal</span></span><span class="session__dist">14 km</span></li>
+          <li class="session"><span class="session__day">Dom</span><span class="session__info"><strong>Tirada larga en Reforma</strong><span>7:30 · Ángel de la Independencia</span></span><span class="session__dist">21 km</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

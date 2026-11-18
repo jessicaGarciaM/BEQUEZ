@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tienda — PULSO Performance Wear</title>
+  <meta name="description" content="Compra ropa deportiva PULSO: playeras, leggings, hoodies, shorts y accesorios para running, training y lifestyle.">
+  <meta name="theme-color" content="#2340FF">
+  <meta property="og:title" content="Tienda — PULSO Performance Wear">
+  <meta property="og:image" content="assets/img/brand/og-image.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/shop.js"></script>
+</head>
+<body data-page="tienda">
+  <main id="main">
+    <section class="page-hero wrap">
+      <nav class="crumbs" aria-label="Migas de pan"><a href="index.html">Inicio</a><span>/</span><span data-crumb>Tienda</span></nav>
+      <div class="page-hero__row">
+        <h1 class="display" data-shop-title data-split>Tienda</h1>
+        <p data-shop-sub data-reveal>Doce prendas y accesorios diseñados para moverte. Filtra por deporte, talla, color o precio.</p>
+      </div>
+    </section>
+    <div class="wrap shop">
+      <aside class="filters" id="filters" aria-label="Filtros" aria-hidden="false">
+        <div class="filters__head"><h2>Filtros</h2><button class="icon-btn" data-close-filters aria-label="Cerrar filtros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+        <div data-filter-groups></div>
+        <button class="btn btn--ghost btn--block" style="margin-top:1rem" data-clear>Limpiar filtros</button>
+        <button class="btn btn--primary btn--block filter-open-btn" style="margin-top:.6rem" data-close-filters>Ver resultados</button>
+      </aside>
+      <section aria-label="Productos">
+        <div class="toolbar">
+          <div style="display:flex;gap:.6rem;align-items:center">
+            <button class="btn btn--ghost filter-open-btn" style="min-height:44px" data-open-filters>Filtros</button>
+            <p class="toolbar__count" aria-live="polite" style="margin:0"><span data-count>12</span> productos</p>
+          </div>
+          <div class="select"><label class="sr-only" for="sort">Ordenar</label>
+            <select id="sort" data-sort>
+              <option value="featured">Destacados</option><option value="new">Lo más nuevo</option>
+              <option value="price-asc">Precio: menor a mayor</option><option value="price-desc">Precio: mayor a menor</option><option value="name">Nombre (A–Z)</option>
+            </select></div>
+        </div>
+        <div class="active-chips" data-chips></div>
+        <div class="grid" data-grid></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

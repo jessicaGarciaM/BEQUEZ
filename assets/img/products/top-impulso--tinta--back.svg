@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700">
+<defs>
+ <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+  <rect width="6" height="6" fill="none"/><line x1="0" y1="0" x2="0" y2="6" stroke="#000" stroke-width="1.2" opacity=".5"/>
+ </pattern>
+ <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="1" stop-color="#000" stop-opacity=".28"/>
+ </linearGradient>
+ <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+ <filter id="drop" x="-30%" y="-30%" width="160%" height="170%">
+  <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#0a1033" flood-opacity=".22"/>
+ </filter>
+</defs><clipPath id="clip-bra"><path d="M150,250 Q200,200 225,110 L265,110 Q290,200 300,205 Q310,200 335,110 L375,110 Q400,200 450,250 Q470,400 455,520 L145,520 Q130,400 150,250 Z"/></clipPath><g filter="url(#drop)"><path d="M150,250 Q200,200 225,110 L265,110 Q290,200 300,205 Q310,200 335,110 L375,110 Q400,200 450,250 Q470,400 455,520 L145,520 Q130,400 150,250 Z" fill="#141A3D"/></g><g clip-path="url(#clip-bra)"><path d="M225,110 L265,110 L262,140 L222,140 Z" fill="#FFE14D"/><path d="M335,110 L375,110 L378,140 L338,140 Z" fill="#FFE14D"/><path d="M147,460 L453,460 L455,520 L145,520 Z" fill="#111635"/><path d="M147,460 L453,460 L455,520 L145,520 Z" fill="url(#weave)" opacity=".35"/><path d="M200,320 Q240,380 260,420" stroke="#fff" stroke-opacity=".13" stroke-width="34" fill="none" filter="url(#blur10)"/><path d="M200,320 Q240,380 260,420" transform="translate(26,4)" stroke="#000" stroke-opacity=".12" stroke-width="26" fill="none" filter="url(#blur10)"/><path d="M400,320 Q360,380 340,420" stroke="#fff" stroke-opacity=".13" stroke-width="34" fill="none" filter="url(#blur10)"/><path d="M400,320 Q360,380 340,420" transform="translate(26,4)" stroke="#000" stroke-opacity=".12" stroke-width="26" fill="none" filter="url(#blur10)"/><rect width="600" height="700" fill="url(#weave)" opacity="0.07"/><rect width="600" height="700" fill="url(#light)"/></g><path d="M175,300 Q235,380 300,330 Q365,380 425,300" fill="none" stroke="#666a80" stroke-opacity=".7" stroke-width="2" stroke-dasharray="7 6"/><path d="M147,460 L453,460" fill="none" stroke="#666a80" stroke-opacity=".7" stroke-width="2" stroke-dasharray="7 6"/><path d="M0,30 H22 L30,12 L40,50 L48,30 H70" transform="translate(280.75,481.75) scale(0.55) scale(1,.75)" fill="none" stroke="#FFE14D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
