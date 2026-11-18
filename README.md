@@ -31,7 +31,7 @@ python3 -m http.server 8000
 
 1. En el repositorio: **Settings → Pages**.
 2. En *Source* elige **Deploy from a branch**, rama `main`, carpeta `/ (root)`.
-3. Guarda. En uno o dos minutos el sitio queda en `https://TU-USUARIO.github.io/pulso-sportswear/`.
+3. Guarda. En uno o dos minutos el sitio queda en `https://jessicagarciam.github.io/BEQUEZ/`.
 
 ## Estructura
 
