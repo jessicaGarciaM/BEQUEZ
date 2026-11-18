@@ -78,6 +78,23 @@
     setInterval(() => { t += 0.08; bpm.textContent = Math.round(96 + Math.sin(t) * 30); }, 120);
   }
 
+  // Ajustar cada diapositiva para que quepa completa en la pantalla
+  function fit() {
+    slides.forEach((s) => {
+      const inner = $('.slide__inner', s);
+      inner.style.zoom = 1;
+      const cs = getComputedStyle(s);
+      const avail = s.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      const h = inner.scrollHeight;
+      if (h > avail) inner.style.zoom = Math.max(0.6, avail / h).toFixed(3);
+    });
+  }
+  let ft; const refit = () => { clearTimeout(ft); ft = setTimeout(fit, 120); };
+  addEventListener('resize', refit);
+  if (document.fonts) document.fonts.ready.then(fit);
+  $$('img', $('.deck')).forEach((im) => { if (!im.complete) im.addEventListener('load', refit, { once: true }); });
+  fit();
+
   setActive(0);
   window.PULSO.reveal();
 })();

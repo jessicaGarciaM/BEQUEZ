@@ -1128,3 +1128,34 @@ body { overflow-x: clip; }
   .summary.is-collapsed .summary__body { display: none; }
 }
 .shop > * { min-width: 0; }
+
+/* Cada diapositiva ocupa exactamente una pantalla, también en celular */
+html:has(.page-deck) { scroll-snap-type: y mandatory; }
+.slide { height: 100svh; min-height: 0; align-items: center; scroll-snap-stop: always; }
+.slide__inner { max-height: 100%; }
+@media (max-width: 680px) {
+  .slide { padding: calc(var(--header-h) + .6rem) 0 5.4rem; align-items: center; }
+  .slide__note, .cover__hint { display: none; }
+  .slide__title { font-size: clamp(2.1rem, 10vw, 2.8rem); }
+  .slide__title--xl { font-size: clamp(3rem, 15vw, 4.2rem); }
+  .slide__text { font-size: .98rem; line-height: 1.42; }
+  .split, .split--wide { gap: 1.2rem; }
+  .reasons { gap: .9rem; margin-top: .4rem; }
+  .reasons div { padding-top: .7rem; }
+  .reasons h3 { font-size: 1.05rem; margin-bottom: .25rem; }
+  .reasons p { font-size: .9rem; }
+  .checks { gap: .4rem; }
+  .checks li { padding: .65rem .8rem .65rem 2.6rem; font-size: .92rem; }
+  .facts dt { font-size: 2.2rem; }
+  .facts dd { font-size: .85rem; }
+  .concept li { padding-top: .7rem; }
+  .concept span { font-size: .85rem; }
+  .steps-list { gap: .6rem; }
+  .steps-list li { padding: .8rem 1rem; }
+  .steps-list span { font-size: .88rem; }
+  .bpm-demo { padding: 1.1rem; }
+  .mini-lanes span { font-size: 2rem; padding: .6rem 0; }
+  .lines article { padding: .6rem .8rem; }
+  .lines img { max-height: 88px; }
+  .cover__lead { font-size: 1.3rem; }
+}
